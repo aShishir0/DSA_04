@@ -1,4 +1,6 @@
 #include <iostream>
+#include <chrono>
+#include <ctime>
 using namespace std;
 
 
@@ -23,36 +25,48 @@ void printArray(int arr[], int n) {
 }
 
 
+int main()
+{
+    int n;
+    cout<<"Enter the size of array:"<<endl<<endl;
+    cin>>n;
+    int randArray[n];
+    for (int i=0;i<n;i++)
+    {
+        randArray[i]=rand()%200;
+    }
+    printArray(randArray,n);
+    cout<<endl<<endl;
+  auto start = std::chrono::system_clock::now();
+    insertionSort(randArray,n);
+  auto end = std::chrono::system_clock::now();
+    
+    printArray(randArray,n);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-int main() {
-    int arr[] = {12, 11, 13, 5, 6};
-    int N = sizeof(arr) / sizeof(arr[0]);
-
-    insertionSort(arr, N);
-    printArray(arr, N);
-
-    return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
