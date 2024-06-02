@@ -28,8 +28,9 @@ void printArray(int arr[], int n) {
 int main()
 {
     int n;
-    cout<<"Enter the size of array:"<<endl<<endl;
+    cout<<"Enter the size of array:";
     cin>>n;
+    cout<<endl;
     int randArray[n];
     for (int i=0;i<n;i++)
     {
@@ -40,9 +41,13 @@ int main()
   auto start = std::chrono::system_clock::now();
     insertionSort(randArray,n);
   auto end = std::chrono::system_clock::now();
-    
-    printArray(randArray,n);
 
+   printArray(randArray,n);
+
+
+   auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+
+    std::cout << "Execution time: " << duration.count() << " microseconds" << std::endl;
 }
 
 
