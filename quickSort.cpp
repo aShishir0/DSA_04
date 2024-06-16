@@ -64,4 +64,7 @@ int main(){
         cout<<randArr[j]<<' ';
     }
     cout<<endl;
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+
+    std::cout << "Execution time: " << duration.count() << " microseconds" << std::endl;
 }
