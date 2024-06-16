@@ -57,7 +57,9 @@ int main(){
         randArr[i]=rand()%200;
     }
 
+    auto start = std::chrono::system_clock::now();
     quickSort(randArr,0,n-1);
+    auto end = std::chrono::system_clock::now();
     for(int j=0;j<n;j++){
         cout<<randArr[j]<<' ';
     }
