@@ -1,5 +1,7 @@
 #include<iostream>
 #include<random>
+#include <chrono>
+#include <ctime>
 using namespace std;
 
 int partition(int arr[],int start,int end){
